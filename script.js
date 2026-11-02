@@ -280,6 +280,9 @@ function fillFiche(card) {
   for (const name of ['--h', '--h2', '--c', '--hb']) {
     dialog.style.setProperty(name, card.el.style.getPropertyValue(name) || null);
   }
+  // …et son décor
+  dialog.dataset.habitat = card.el.dataset.habitat;
+  dialog.dataset.type = card.el.dataset.type;
 
   showFicheImage();
   fiche.num.textContent = card.numLabel;

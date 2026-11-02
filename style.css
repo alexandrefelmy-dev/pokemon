@@ -103,6 +103,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Image de fond posée sur le dégradé pastel en mode « screen » :
+   ses noirs laissent voir le pastel, ses gris l'éclaircissent,
+   et l'image prend ainsi la teinte violette de la page. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("décor/fond de page.webp") center / cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: .85;
+  pointer-events: none;
+}
+
 /* ---------- En-tête ---------- */
 .intro {
   max-width: 1080px;
@@ -406,7 +420,8 @@ h1 {
   place-items: center;
   aspect-ratio: 1 / .9;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 42%, var(--tint-1) 0%, var(--tint-2) 75%);
+  /* Le décor de l'habitat, ou à défaut un dégradé aux couleurs de la carte */
+  background: var(--scene, radial-gradient(circle at 50% 42%, var(--tint-1) 0%, var(--tint-2) 75%));
 }
 
 /* Halo lumineux derrière le Pokémon */
@@ -416,7 +431,7 @@ h1 {
   width: 62%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, rgb(255 255 255 / .85), transparent 70%);
+  background: radial-gradient(circle, rgb(255 255 255 / .55), transparent 70%);
   animation: pulse 5s ease-in-out infinite;
 }
 
@@ -645,6 +660,167 @@ h1 {
 }
 
 /* =========================================================
+   Habitats : un décor derrière chaque Pokémon
+   Le HTML indique le lieu de vie (data-habitat="volcan"…). Chaque
+   décor n'est fait que de dégradés superposés, sans aucune image :
+   - montagnes et volcans : conic-gradient (un angle plein depuis un sommet)
+   - nuages, collines, soleil, lune : radial-gradient en ellipse
+   - étoiles, pluie, vagues : petit motif répété
+   Le premier dégradé de la liste est dessiné au-dessus des suivants.
+   ========================================================= */
+[data-habitat="ciel"] {
+  --scene:
+    radial-gradient(ellipse 22% 9% at 72% 20%, rgb(255 255 255 / .8) 30%, transparent 70%),
+    radial-gradient(ellipse 30% 13% at 15% 86%, #fff 35%, transparent 70%),
+    radial-gradient(ellipse 36% 15% at 80% 92%, #fff 35%, transparent 70%),
+    radial-gradient(ellipse 26% 10% at 45% 98%, rgb(255 255 255 / .9) 35%, transparent 70%),
+    linear-gradient(#8cc8f2, #c6e5fa 65%, #eef8ff);
+}
+
+[data-habitat="orage"] {
+  --scene:
+    repeating-linear-gradient(105deg, rgb(255 255 255 / .14) 0 1px, transparent 1px 10px),
+    radial-gradient(ellipse 40% 18% at 20% 8%, #59617a 40%, transparent 72%),
+    radial-gradient(ellipse 45% 20% at 75% 4%, #4d556d 40%, transparent 72%),
+    linear-gradient(#5d6781, #8892aa 60%, #b3bccf);
+}
+
+[data-habitat="couchant"] {
+  --scene:
+    radial-gradient(ellipse 75% 22% at 25% 106%, #c9705f 96%, transparent 100%),
+    radial-gradient(ellipse 65% 20% at 88% 110%, #b4605a 96%, transparent 100%),
+    radial-gradient(circle at 68% 74%, #fff4cc 0 8%, rgb(255 214 150 / .7) 12%, transparent 30%),
+    linear-gradient(#f2a08f, #f8c39b 55%, #fde2b8);
+}
+
+[data-habitat="ocean"] {
+  --scene:
+    repeating-linear-gradient(transparent 0 12px, rgb(255 255 255 / .22) 12px 14px) 0 100% / 100% 46% no-repeat,
+    linear-gradient(transparent 53%, rgb(255 255 255 / .7) 54%, transparent 56%),
+    linear-gradient(#bfe5fa 0 54%, #6ab8e3 54%, #2e7fbe);
+}
+
+[data-habitat="abysses"] {
+  --scene:
+    radial-gradient(circle at 20% 70%, rgb(255 255 255 / .35) 0 3px, transparent 4px),
+    radial-gradient(circle at 82% 40%, rgb(255 255 255 / .3) 0 2px, transparent 3px),
+    radial-gradient(circle at 65% 86%, rgb(255 255 255 / .3) 0 4px, transparent 5px),
+    /* Rayons de lumière qui descendent de la surface */
+    conic-gradient(from 160deg at 50% -15%,
+      transparent, rgb(255 255 255 / .14) 4deg, transparent 9deg 14deg,
+      rgb(255 255 255 / .1) 18deg, transparent 23deg 28deg,
+      rgb(255 255 255 / .12) 32deg, transparent 37deg),
+    linear-gradient(#3a84c4, #1d4e8c 60%, #0f2b55);
+}
+
+[data-habitat="volcan"] {
+  --scene:
+    radial-gradient(ellipse 16% 7% at 50% 60%, #ffd27a, #ff7a35 45%, transparent 75%),
+    radial-gradient(ellipse 24% 20% at 55% 34%, rgb(110 100 100 / .4), transparent 70%),
+    /* Le cône du volcan : un angle de 100° depuis le cratère */
+    conic-gradient(from 130deg at 50% 60%, #7a4a40 100deg, transparent 0),
+    linear-gradient(#f4ab86, #f6cba9 60%, #f9dcc0);
+}
+
+[data-habitat="foret"] {
+  --scene:
+    linear-gradient(115deg, transparent 35%, rgb(255 255 240 / .35) 42%, transparent 52%),
+    radial-gradient(circle at 8% 104%, #5f9f63 0 20%, transparent 20.5%),
+    radial-gradient(circle at 34% 110%, #4f8f58 0 24%, transparent 24.5%),
+    radial-gradient(circle at 64% 106%, #5f9f63 0 21%, transparent 21.5%),
+    radial-gradient(circle at 92% 108%, #4f8f58 0 22%, transparent 22.5%),
+    radial-gradient(circle at 22% 100%, #8cc28a 0 26%, transparent 26.5%),
+    radial-gradient(circle at 78% 98%, #8cc28a 0 25%, transparent 25.5%),
+    linear-gradient(#e5f4d6, #c9e6b6);
+}
+
+[data-habitat="glace"] {
+  --scene:
+    linear-gradient(transparent 82%, #fbfdff 82%),
+    conic-gradient(from 140deg at 72% 40%, #c4dcee 80deg, transparent 0),
+    conic-gradient(from 145deg at 28% 30%, #a7c8e2 70deg, transparent 0),
+    linear-gradient(#dcedf9, #f4f9fd);
+}
+
+[data-habitat="cosmos"] {
+  --scene:
+    radial-gradient(circle, #fff 0 1px, transparent 1.5px) 0 0 / 37px 41px,
+    radial-gradient(circle, rgb(255 255 255 / .7) 0 1px, transparent 1.5px) 13px 7px / 53px 47px,
+    radial-gradient(circle, rgb(255 255 255 / .5) 0 .8px, transparent 1.3px) 29px 19px / 71px 83px,
+    radial-gradient(ellipse 55% 35% at 70% 30%, rgb(170 120 255 / .35), transparent 70%),
+    radial-gradient(ellipse 45% 30% at 25% 75%, rgb(90 160 255 / .25), transparent 70%),
+    linear-gradient(#1c1842, #2c2463 60%, #3b307a);
+}
+
+[data-habitat="nuit"] {
+  --scene:
+    radial-gradient(ellipse 80% 20% at 30% 108%, #262a4d 96%, transparent 100%),
+    radial-gradient(ellipse 70% 18% at 90% 110%, #2d3158 96%, transparent 100%),
+    radial-gradient(circle at 78% 22%, #fff8e1 0 9%, rgb(255 248 225 / .25) 11%, transparent 22%),
+    /* Deux motifs d'étoiles de tailles différentes : leurs grilles ne
+       coïncident jamais, et le ciel paraît semé au hasard */
+    radial-gradient(circle, rgb(255 255 255 / .8) 0 1px, transparent 1.5px) 0 0 / 41px 37px,
+    radial-gradient(circle, rgb(255 255 255 / .55) 0 1px, transparent 1.5px) 17px 23px / 67px 59px,
+    linear-gradient(#232a52, #3d4478 70%, #565b8e);
+}
+
+[data-habitat="grotte"] {
+  --scene:
+    /* Stalactites : des triangles pointe en bas, répétés le long du plafond */
+    conic-gradient(from 315deg at 50% 100%, #4f4440 90deg, transparent 0) 0 0 / 11% 12% repeat-x,
+    /* L'entrée éclairée de la grotte */
+    radial-gradient(ellipse 58% 72% at 50% 80%, #d9cdbf 0%, #b4a394 70%, transparent 71%),
+    linear-gradient(#5d514b, #4a403b);
+}
+
+[data-habitat="lac"] {
+  --scene:
+    repeating-linear-gradient(transparent 0 10px, rgb(255 255 255 / .25) 10px 11px) 0 100% / 100% 34% no-repeat,
+    linear-gradient(transparent 65%, #7fb6d6 65%, #5b98c2),
+    conic-gradient(from 140deg at 70% 38%, #8fb3a8 80deg, transparent 0),
+    conic-gradient(from 145deg at 30% 30%, #7aa395 70deg, transparent 0),
+    linear-gradient(#cfe8f4, #eef7fb);
+}
+
+/* =========================================================
+   Décors par type : une image du dossier décor/ selon le type
+   principal du Pokémon (data-type). Placés après les habitats,
+   ils les remplacent. Le dégradé de la carte reste dessous, au
+   cas où l'image ne se charge pas.
+   ========================================================= */
+[data-type] {
+  --scene-img: none;
+  --scene:
+    var(--scene-img) center / cover no-repeat,
+    radial-gradient(circle at 50% 42%, var(--tint-1) 0%, var(--tint-2) 75%);
+}
+[data-type="normal"]   { --scene-img: url("décor/normal.avif"); }
+[data-type="fire"]     { --scene-img: url("décor/feu.avif"); }
+[data-type="water"]    { --scene-img: url("décor/eau.jpg"); }
+[data-type="electric"] { --scene-img: url("décor/electrique.avif"); }
+[data-type="grass"]    { --scene-img: url("décor/plante.jpg"); }
+[data-type="ice"]      { --scene-img: url("décor/glace.jpeg"); }
+[data-type="fighting"] { --scene-img: url("décor/combat.avif"); }
+[data-type="ground"]   { --scene-img: url("décor/sol.avif"); }
+[data-type="flying"]   { --scene-img: url("décor/vent.jpg"); }
+[data-type="psychic"]  { --scene-img: url("décor/psy.jpg"); }
+[data-type="bug"]      { --scene-img: url("décor/insecte.jpeg"); }
+[data-type="rock"]     { --scene-img: url("décor/roche.jpg"); }
+[data-type="ghost"]    { --scene-img: url("décor/spectre.jpg"); }
+[data-type="dragon"]   { --scene-img: url("décor/dragon.jpeg"); }
+[data-type="dark"]     { --scene-img: url("décor/tenebre.jpeg"); }
+[data-type="steel"]    { --scene-img: url("décor/acier.jpeg"); }
+[data-type="fairy"]    { --scene-img: url("décor/fée.jpg"); }
+
+/* En mode sombre, le décor s'assombrit d'un voile */
+@media (prefers-color-scheme: dark) {
+  [data-habitat] .card__art,
+  .fiche[data-habitat] .fiche__art {
+    box-shadow: inset 0 0 0 100vmax rgb(12 10 24 / .32);
+  }
+}
+
+/* =========================================================
    Fiche détaillée (fenêtre <dialog> ouverte par script.js)
    ========================================================= */
 body:has(.fiche[open]) {
@@ -680,7 +856,7 @@ body:has(.fiche[open]) {
   display: grid;
   place-items: center;
   padding: 32px;
-  background: radial-gradient(circle at 50% 45%, var(--tint-1), var(--tint-2) 75%);
+  background: var(--scene, radial-gradient(circle at 50% 45%, var(--tint-1), var(--tint-2) 75%));
 }
 .fiche__art img {
   width: 100%;
