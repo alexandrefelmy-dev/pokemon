@@ -117,11 +117,92 @@ body::before {
   pointer-events: none;
 }
 
-/* ---------- En-tête ---------- */
+/* ---------- En-tête ----------
+   Une bannière : le texte à gauche, trois Pokémon qui flottent à droite
+   devant une lueur pastel. Sous 760 px, les Pokémon passent au-dessus. */
 .intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
   max-width: 1080px;
   margin: 0 auto 56px;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid rgb(255 255 255 / .08);
+  border-radius: 32px;
+  background:
+    radial-gradient(60% 90% at 78% 50%, rgb(169 155 208 / .28), transparent 70%),
+    linear-gradient(120deg, rgb(58 38 54 / .55), rgb(36 30 58 / .45) 55%, rgb(29 42 64 / .55));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .06), 0 24px 60px -24px rgb(0 0 0 / .7);
   animation: rise .7s var(--ease) backwards;
+}
+
+.intro__chiffres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.intro__chiffres li {
+  padding: 6px 14px;
+  border: 1px solid rgb(199 159 189 / .3);
+  border-radius: 999px;
+  background: rgb(255 255 255 / .05);
+  color: #cfc4e2;
+  font-size: .875rem;
+}
+.intro__chiffres strong {
+  color: #f6e4f1;
+  font-weight: 800;
+}
+
+/* Les trois Pokémon se chevauchent : Reshiram au fond, Mewtwo
+   devant à gauche, Mew petit en haut à droite */
+.intro__trio {
+  position: relative;
+  aspect-ratio: 1.25;
+}
+.intro__poke {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 18px 24px rgb(0 0 0 / .45));
+  animation: levitate 6s ease-in-out infinite;
+}
+.intro__poke--reshiram {
+  top: -6%;
+  right: -4%;
+  width: 66%;
+  opacity: .9;
+  animation-duration: 7s;
+  animation-delay: -3s;
+}
+.intro__poke--mewtwo {
+  bottom: -8%;
+  left: 0;
+  width: 58%;
+  z-index: 1;
+}
+.intro__poke--mew {
+  top: 4%;
+  left: 12%;
+  width: 30%;
+  z-index: 2;
+  animation-duration: 4.5s;
+  animation-delay: -1s;
+}
+
+@media (max-width: 760px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .intro__trio {
+    order: -1;
+    width: min(100%, 360px);
+    justify-self: center;
+  }
 }
 
 .intro__eyebrow {
@@ -138,29 +219,21 @@ body::before {
   text-transform: uppercase;
 }
 
-/* Titre façon logo Pokémon : jaune, contour bleu épais, relief bleu nuit */
+/* Titre dans la police du texte, très gras et serré, rempli d'un
+   dégradé pastel clair (rose → lavande → bleu) accordé au fond */
 h1 {
-  display: inline-block;
+  width: fit-content;
   margin: 4px 0 0;
-  padding: 0 .12em .1em 0;
-  color: #ffcb05;
-  font-family: "Arial Black", "Lato", "Helvetica Neue", system-ui, sans-serif;
+  padding-bottom: .06em; /* garde la descente du « g » dans le dégradé */
+  background: linear-gradient(100deg, #f6e4f1, #d9c8f2 45%, #b4c8ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: clamp(2.75rem, 8vw, 4.75rem);
-  font-weight: 900;
-  letter-spacing: .01em;
-  line-height: 1.1;
-  /* Contour dessiné derrière le remplissage pour ne pas amincir les lettres */
-  -webkit-text-stroke: .14em #2a75bb;
-  paint-order: stroke fill;
-  /* Relief : plusieurs ombres décalées forment une tranche pleine */
-  text-shadow:
-    .03em .04em 0 #1d4f8c,
-    .05em .07em 0 #1d4f8c,
-    .07em .10em 0 #173f72,
-    .09em .13em 0 #12305a,
-    .10em .18em .25em rgb(0 0 0 / .5);
-  transform: rotate(-2deg) skewX(-6deg);
-  transform-origin: left bottom;
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+  filter: drop-shadow(0 6px 24px rgb(169 155 208 / .35));
 }
 
 .intro__lead {

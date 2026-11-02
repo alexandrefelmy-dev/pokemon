@@ -4,16 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Légendaires · Fiches Pokémon</title>
+  <title>Légendaire · Fiches Pokémon</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
   <header class="intro">
-    <p class="intro__eyebrow">Pokédex · 54 fiches</p>
-    <h1>Légendaires</h1>
-    <p class="intro__lead">Les Pokémon légendaires et fabuleux des six premières générations. Survolez une carte pour déclencher son attaque fétiche, cliquez pour ouvrir sa fiche.</p>
+    <div class="intro__text">
+      <p class="intro__eyebrow">Pokédex · 54 fiches</p>
+      <h1>Légendaire</h1>
+      <p class="intro__lead">Les Pokémon légendaires et fabuleux des six premières générations. Survolez une carte pour déclencher son attaque fétiche, cliquez pour ouvrir sa fiche.</p>
+      <ul class="intro__chiffres">
+        <li><strong>38</strong> légendaires</li>
+        <li><strong>16</strong> fabuleux</li>
+        <li><strong>6</strong> générations</li>
+      </ul>
+    </div>
+    <!-- Décoratif : les trois Pokémon sont déjà présentés dans leurs cartes -->
+    <div class="intro__trio" aria-hidden="true">
+      <img class="intro__poke intro__poke--mewtwo" src="img/mewtwo.png" alt="" width="475" height="475">
+      <img class="intro__poke intro__poke--reshiram" src="img/reshiram.png" alt="" width="475" height="475">
+      <img class="intro__poke intro__poke--mew" src="img/mew.png" alt="" width="475" height="475">
+    </div>
   </header>
 
   <!-- Barre de recherche : cachée sans JavaScript, script.js l'affiche -->
