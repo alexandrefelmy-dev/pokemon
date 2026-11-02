@@ -787,30 +787,46 @@ h1 {
    principal du Pokémon (data-type). Placés après les habitats,
    ils les remplacent. Le dégradé de la carte reste dessous, au
    cas où l'image ne se charge pas.
+   --veil : opacité du voile teinté posé sur l'image (0 à 1), plus
+   fort au centre, derrière le Pokémon. Les images chargées en
+   reçoivent un plus épais pour que le Pokémon ressorte.
    ========================================================= */
 [data-type] {
   --scene-img: none;
+  --veil: .4;
   --scene:
+    radial-gradient(circle at 50% 48%,
+      color-mix(in oklch, var(--tint-1) calc(min(var(--veil) + .25, .95) * 100%), transparent) 0%,
+      color-mix(in oklch, var(--tint-1) calc(var(--veil) * 100%), transparent) 70%),
     var(--scene-img) center / cover no-repeat,
     radial-gradient(circle at 50% 42%, var(--tint-1) 0%, var(--tint-2) 75%);
 }
-[data-type="normal"]   { --scene-img: url("décor/normal.avif"); }
-[data-type="fire"]     { --scene-img: url("décor/feu.avif"); }
-[data-type="water"]    { --scene-img: url("décor/eau.jpg"); }
-[data-type="electric"] { --scene-img: url("décor/electrique.avif"); }
-[data-type="grass"]    { --scene-img: url("décor/plante.jpg"); }
-[data-type="ice"]      { --scene-img: url("décor/glace.jpeg"); }
-[data-type="fighting"] { --scene-img: url("décor/combat.avif"); }
-[data-type="ground"]   { --scene-img: url("décor/sol.avif"); }
-[data-type="flying"]   { --scene-img: url("décor/vent.jpg"); }
-[data-type="psychic"]  { --scene-img: url("décor/psy.jpg"); }
-[data-type="bug"]      { --scene-img: url("décor/insecte.jpeg"); }
-[data-type="rock"]     { --scene-img: url("décor/roche.jpg"); }
-[data-type="ghost"]    { --scene-img: url("décor/spectre.jpg"); }
-[data-type="dragon"]   { --scene-img: url("décor/dragon.jpeg"); }
-[data-type="dark"]     { --scene-img: url("décor/tenebre.jpeg"); }
-[data-type="steel"]    { --scene-img: url("décor/acier.jpeg"); }
-[data-type="fairy"]    { --scene-img: url("décor/fée.jpg"); }
+[data-type="normal"]   { --scene-img: url("décor/normal.avif");     --veil: .5; }
+[data-type="fire"]     { --scene-img: url("décor/feu.avif");        --veil: .4; }
+[data-type="water"]    { --scene-img: url("décor/eau.jpg");         --veil: .4; }
+[data-type="electric"] { --scene-img: url("décor/electrique.avif"); --veil: .5; }
+[data-type="grass"]    { --scene-img: url("décor/plante.jpg");      --veil: .6; }
+[data-type="ice"]      { --scene-img: url("décor/glace.jpeg");      --veil: .3; }
+[data-type="fighting"] { --scene-img: url("décor/combat.avif");     --veil: .4; }
+[data-type="ground"]   { --scene-img: url("décor/sol.avif");        --veil: .45; }
+[data-type="flying"]   { --scene-img: url("décor/vent.jpg");        --veil: .3; }
+[data-type="psychic"]  { --scene-img: url("décor/psy.jpg");         --veil: .45; }
+[data-type="bug"]      { --scene-img: url("décor/insecte.jpeg");    --veil: .7; }
+[data-type="rock"]     { --scene-img: url("décor/roche.jpg");       --veil: .6; }
+[data-type="ghost"]    { --scene-img: url("décor/spectre.jpg");     --veil: .65; }
+[data-type="dragon"]   { --scene-img: url("décor/dragon.jpeg");     --veil: .6; }
+[data-type="dark"]     { --scene-img: url("décor/tenebre.jpeg");    --veil: .45; }
+[data-type="steel"]    { --scene-img: url("décor/acier.jpeg");      --veil: .3; }
+[data-type="fairy"]    { --scene-img: url("décor/fée.jpg");         --veil: .65; }
+
+/* Derrière le Pokémon, le halo floute aussi le décor, en fondu
+   vers les bords pour ne pas laisser de contour net */
+[data-type] .card__art::before {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-mask: radial-gradient(circle, #000 45%, transparent 70%);
+  mask: radial-gradient(circle, #000 45%, transparent 70%);
+}
 
 /* En mode sombre, le décor s'assombrit d'un voile */
 @media (prefers-color-scheme: dark) {
