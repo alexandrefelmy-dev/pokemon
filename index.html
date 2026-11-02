@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Légendaires · Fiches Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="intro">
+    <p class="intro__eyebrow">Pokédex · 54 fiches</p>
+    <h1>Légendaires</h1>
+    <p class="intro__lead">Les Pokémon légendaires et fabuleux des six premières générations. Survolez une carte pour déclencher son attaque fétiche, cliquez pour ouvrir sa fiche.</p>
+  </header>
+
+  <!-- Barre de recherche : cachée sans JavaScript, script.js l'affiche -->
+  <form class="toolbar" role="search" aria-label="Rechercher et trier les Pokémon" hidden>
+    <div class="field field--search">
+      <label for="q">Rechercher</label>
+      <input id="q" type="search" placeholder="Nom ou numéro" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="f-type">Type</label>
+      <select id="f-type">
+        <option value="">Tous les types</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-gen">Génération</label>
+      <select id="f-gen">
+        <option value="">Toutes</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-sort">Trier par</label>
+      <select id="f-sort">
+        <option value="num">Numéro</option>
+        <option value="nom">Nom</option>
+        <option value="pv">PV</option>
+        <option value="attaque">Attaque</option>
+        <option value="att-spe">Att. Spé.</option>
+        <option value="vitesse">Vitesse</option>
+      </select>
+    </div>
+    <button class="toolbar__shiny" type="button" aria-pressed="false">Chromatique</button>
+    <p class="toolbar__count" aria-live="polite"><output>54 Pokémon</output></p>
+    <button class="toolbar__clear" type="reset" hidden>Effacer</button>
+  </form>
+
+  <p class="empty" hidden>Aucun Pokémon ne correspond à cette recherche. <button type="button">Effacer les filtres</button></p>
+
+  <main>
+
+    <section class="gen" aria-labelledby="gen-I">
+      <h2 class="gen__title" id="gen-I">Génération I <span>Kanto · 5 Pokémon</span></h2>
+      <div class="cards">
+
+        <article class="card" style="--h: 225; --h2: 250; --c: 0.8" aria-labelledby="p0144"
+                 data-def="100" data-def-spe="125" data-taille="1.7" data-poids="55.4">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png" alt="Illustration de Artikodin" width="475" height="475" loading="lazy">
+              <span class="fx fx--neige" style="--x: 28%; --y: 36%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0144 <span>· Légendaire</span></p>
+            <h3 id="p0144">Artikodin</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--ice">Glace</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Le légendaire oiseau des glaces. On dit qu’il apparaît aux gens perdus dans les sommets.</p>
+            <p class="card__move">Attaque fétiche <strong>Blizzard</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 90"><dt>PV</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 85"><dt>Attaque</dt><dd>85</dd></div>
+              <div class="stat" style="--v: 95"><dt>Att. Spé.</dt><dd>95</dd></div>
+              <div class="stat" style="--v: 85"><dt>Vitesse</dt><dd>85</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 95; --h2: 55" aria-labelledby="p0145"
+                 data-def="85" data-def-spe="90" data-taille="1.6" data-poids="52.6">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png" alt="Illustration de Électhor" width="475" height="475" loading="lazy">
+              <span class="fx fx--eclair" style="--x: 50%; --y: 47%; --dir: 90deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0145 <span>· Légendaire</span></p>
+            <h3 id="p0145">Électhor</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--electric">Électrik</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">L’oiseau légendaire de la foudre. Il surgit hors des nuages en lançant d’énormes éclairs.</p>
+            <p class="card__move">Attaque fétiche <strong>Fatal-Foudre</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 90"><dt>PV</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 125"><dt>Att. Spé.</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 55; --h2: 30" aria-labelledby="p0146"
+                 data-def="90" data-def-spe="85" data-taille="2" data-poids="60">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" alt="Illustration de Sulfura" width="475" height="475" loading="lazy">
+              <span class="fx fx--feu" style="--x: 86%; --y: 72%; --dir: 30deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0146 <span>· Légendaire</span></p>
+            <h3 id="p0146">Sulfura</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--fire">Feu</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Le légendaire oiseau du feu. Une pluie de flammes surgit à chaque battement de ses ailes.</p>
+            <p class="card__move">Attaque fétiche <strong>Déflagration</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 90"><dt>PV</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 125"><dt>Att. Spé.</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 305; --h2: 290; --c: 0.7" aria-labelledby="p0150"
+                 data-def="90" data-def-spe="90" data-taille="2" data-poids="122">
+          <div class="card__art">
+            <div class="poke">
+              <img src="img/mewtwo.png" alt="Mewtwo, Pokémon humanoïde gris pâle à la queue violette, en posture de combat" width="475" height="475" loading="lazy">
+              <span class="fx fx--orbe" style="--x: 28%; --y: 29%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0150 <span>· Légendaire</span></p>
+            <h3 id="p0150">Mewtwo</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Il est le fruit de nombreuses expériences génétiques horribles et malsaines.</p>
+            <p class="card__move">Attaque fétiche <strong>Ball’Ombre</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 106"><dt>PV</dt><dd>106</dd></div>
+              <div class="stat" style="--v: 110"><dt>Attaque</dt><dd>110</dd></div>
+              <div class="stat" style="--v: 154"><dt>Att. Spé.</dt><dd>154</dd></div>
+              <div class="stat" style="--v: 130"><dt>Vitesse</dt><dd>130</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 350; --h2: 250" aria-labelledby="p0151"
+                 data-def="100" data-def-spe="100" data-taille="0.4" data-poids="4">
+          <div class="card__art">
+            <div class="poke">
+              <img src="img/mew.png" alt="Mew, petit Pokémon rose flottant, à la longue queue fine" width="475" height="475" loading="lazy">
+              <span class="fx fx--ondes" style="--x: 63%; --y: 45%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0151 <span>· Fabuleux</span></p>
+            <h3 id="p0151">Mew</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Son ADN contient les codes génétiques de tous les Pokémon. Il peut utiliser nombre de techniques.</p>
+            <p class="card__move">Attaque fétiche <strong>Psyko</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <section class="gen" aria-labelledby="gen-II">
+      <h2 class="gen__title" id="gen-II">Génération II <span>Johto · 6 Pokémon</span></h2>
+      <div class="cards">
+
+        <article class="card" style="--h: 85; --h2: 300" aria-labelledby="p0243"
+                 data-def="75" data-def-spe="100" data-taille="1.9" data-poids="178">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/243.png" alt="Illustration de Raikou" width="475" height="475" loading="lazy">
+              <span class="fx fx--eclair" style="--x: 14%; --y: 42%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0243 <span>· Légendaire</span></p>
+            <h3 id="p0243">Raikou</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--electric">Électrik</li>
+            </ul>
+            <p class="card__desc">Ce terrible Pokémon emmagasine de l’énergie puis court en lançant de puissants éclairs.</p>
+            <p class="card__move">Attaque fétiche <strong>Fatal-Foudre</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 90"><dt>PV</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 85"><dt>Attaque</dt><dd>85</dd></div>
+              <div class="stat" style="--v: 115"><dt>Att. Spé.</dt><dd>115</dd></div>
+              <div class="stat" style="--v: 115"><dt>Vitesse</dt><dd>115</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 45; --h2: 75; --c: 0.9" aria-labelledby="p0244"
+                 data-def="85" data-def-spe="75" data-taille="2.1" data-poids="198">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/244.png" alt="Illustration de Entei" width="475" height="475" loading="lazy">
+              <span class="fx fx--feu" style="--x: 14%; --y: 34%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0244 <span>· Légendaire</span></p>
+            <h3 id="p0244">Entei</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--fire">Feu</li>
+            </ul>
+            <p class="card__desc">On raconte qu’à chaque fois qu’il rugit, un volcan entre en éruption quelque part.</p>
+            <p class="card__move">Attaque fétiche <strong>Éruption</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 115"><dt>PV</dt><dd>115</dd></div>
+              <div class="stat" style="--v: 115"><dt>Attaque</dt><dd>115</dd></div>
+              <div class="stat" style="--v: 90"><dt>Att. Spé.</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 215; --h2: 300" aria-labelledby="p0245"
+                 data-def="115" data-def-spe="115" data-taille="2" data-poids="187">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/245.png" alt="Illustration de Suicune" width="475" height="475" loading="lazy">
+              <span class="fx fx--bulles" style="--x: 9%; --y: 40%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0245 <span>· Légendaire</span></p>
+            <h3 id="p0245">Suicune</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--water">Eau</li>
+            </ul>
+            <p class="card__desc">Il parcourt le vaste monde pour purifier les eaux polluées. Il accompagne le vent du nord.</p>
+            <p class="card__move">Attaque fétiche <strong>Surf</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 75"><dt>Attaque</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 90"><dt>Att. Spé.</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 85"><dt>Vitesse</dt><dd>85</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 255; --h2: 230; --c: 0.5" aria-labelledby="p0249"
+                 data-def="130" data-def-spe="154" data-taille="5.2" data-poids="216">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png" alt="Illustration de Lugia" width="475" height="475" loading="lazy">
+              <span class="fx fx--vent" style="--x: 26%; --y: 40%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0249 <span>· Légendaire</span></p>
+            <h3 id="p0249">Lugia</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Il dort dans une faille des grands fonds. Ses battements d’ailes génèrent une tempête de 40 jours.</p>
+            <p class="card__move">Attaque fétiche <strong>Aéroblast</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 106"><dt>PV</dt><dd>106</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 90"><dt>Att. Spé.</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 110"><dt>Vitesse</dt><dd>110</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 35; --h2: 95" aria-labelledby="p0250"
+                 data-def="90" data-def-spe="154" data-taille="3.8" data-poids="199">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png" alt="Illustration de Ho-Oh" width="475" height="475" loading="lazy">
+              <span class="fx fx--feu" style="--x: 83%; --y: 43%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0250 <span>· Légendaire</span></p>
+            <h3 id="p0250">Ho-Oh</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--fire">Feu</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Ses plumes possèdent sept couleurs. On prétend que sa vue apporte la joie éternelle.</p>
+            <p class="card__move">Attaque fétiche <strong>Feu Sacré</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 106"><dt>PV</dt><dd>106</dd></div>
+              <div class="stat" style="--v: 130"><dt>Attaque</dt><dd>130</dd></div>
+              <div class="stat" style="--v: 110"><dt>Att. Spé.</dt><dd>110</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 140; --h2: 230" aria-labelledby="p0251"
+                 data-def="100" data-def-spe="100" data-taille="0.6" data-poids="5">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/251.png" alt="Illustration de Celebi" width="475" height="475" loading="lazy">
+              <span class="fx fx--feuilles" style="--x: 16%; --y: 56%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0251 <span>· Fabuleux</span></p>
+            <h3 id="p0251">Celebi</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+              <li class="type type--grass">Plante</li>
+            </ul>
+            <p class="card__desc">Ce Pokémon venu du futur soigne les blessures et donne de la force aux plantes.</p>
+            <p class="card__move">Attaque fétiche <strong>Tempête Verte</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <section class="gen" aria-labelledby="gen-III">
+      <h2 class="gen__title" id="gen-III">Génération III <span>Hoenn · 10 Pokémon</span></h2>
+      <div class="cards">
+
+        <article class="card" style="--h: 60; --h2: 40; --c: 0.8" aria-labelledby="p0377"
+                 data-def="200" data-def-spe="100" data-taille="1.7" data-poids="230">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/377.png" alt="Illustration de Regirock" width="475" height="475" loading="lazy">
+              <span class="fx fx--seisme" style="--x: 50%; --y: 94%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0377 <span>· Légendaire</span></p>
+            <h3 id="p0377">Regirock</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--rock">Roche</li>
+            </ul>
+            <p class="card__desc">Les roches qui composent son corps se retrouvent également dans les diverses couches terrestres.</p>
+            <p class="card__move">Attaque fétiche <strong>Lame de Roc</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 50"><dt>Att. Spé.</dt><dd>50</dd></div>
+              <div class="stat" style="--v: 50"><dt>Vitesse</dt><dd>50</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 215; --h2: 200; --c: 0.8" aria-labelledby="p0378"
+                 data-def="100" data-def-spe="200" data-taille="1.8" data-poids="175">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/378.png" alt="Illustration de Regice" width="475" height="475" loading="lazy">
+              <span class="fx fx--neige" style="--x: 58%; --y: 33%; --dir: 90deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0378 <span>· Légendaire</span></p>
+            <h3 id="p0378">Regice</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--ice">Glace</li>
+            </ul>
+            <p class="card__desc">Son corps est fait de glace datant de l’ère glaciaire. Il contrôle un air gelé de -200 °C.</p>
+            <p class="card__move">Attaque fétiche <strong>Laser Glace</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 50"><dt>Attaque</dt><dd>50</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 50"><dt>Vitesse</dt><dd>50</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 250; --h2: 230; --c: 0.4" aria-labelledby="p0379"
+                 data-def="150" data-def-spe="150" data-taille="1.9" data-poids="205">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/379.png" alt="Illustration de Registeel" width="475" height="475" loading="lazy">
+              <span class="fx fx--rayons" style="--x: 51%; --y: 40%; --dir: 90deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0379 <span>· Légendaire</span></p>
+            <h3 id="p0379">Registeel</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--steel">Acier</li>
+            </ul>
+            <p class="card__desc">Il paraît qu’il est né dans le manteau terrestre et qu’il en a émergé il y a environ 10 000 ans.</p>
+            <p class="card__move">Attaque fétiche <strong>Luminocanon</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 75"><dt>Attaque</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 75"><dt>Att. Spé.</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 50"><dt>Vitesse</dt><dd>50</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 25; --h2: 265" aria-labelledby="p0380"
+                 data-def="90" data-def-spe="130" data-taille="1.4" data-poids="40">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/380.png" alt="Illustration de Latias" width="475" height="475" loading="lazy">
+              <span class="fx fx--orbe" style="--x: 10%; --y: 52%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0380 <span>· Légendaire</span></p>
+            <h3 id="p0380">Latias</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Son corps est recouvert d’un duvet qui reflète la lumière et le rend invisible.</p>
+            <p class="card__move">Attaque fétiche <strong>Ball’Brume</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 80"><dt>Attaque</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 110"><dt>Att. Spé.</dt><dd>110</dd></div>
+              <div class="stat" style="--v: 110"><dt>Vitesse</dt><dd>110</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 265; --h2: 25" aria-labelledby="p0381"
+                 data-def="80" data-def-spe="110" data-taille="2" data-poids="60">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/381.png" alt="Illustration de Latios" width="475" height="475" loading="lazy">
+              <span class="fx fx--orbe" style="--x: 10%; --y: 46%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0381 <span>· Légendaire</span></p>
+            <h3 id="p0381">Latios</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Un Pokémon très intelligent qui comprend le langage humain. Il déteste se battre.</p>
+            <p class="card__move">Attaque fétiche <strong>Lumi-Éclat</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 130"><dt>Att. Spé.</dt><dd>130</dd></div>
+              <div class="stat" style="--v: 110"><dt>Vitesse</dt><dd>110</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 255; --h2: 25" aria-labelledby="p0382"
+                 data-def="90" data-def-spe="140" data-taille="4.5" data-poids="352">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" alt="Illustration de Kyogre" width="475" height="475" loading="lazy">
+              <span class="fx fx--ondes" style="--x: 22%; --y: 58%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0382 <span>· Légendaire</span></p>
+            <h3 id="p0382">Kyogre</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--water">Eau</li>
+            </ul>
+            <p class="card__desc">Ennemi juré de Groudon, la légende dit qu’il a étendu les mers en causant déluges et raz de marée.</p>
+            <p class="card__move">Attaque fétiche <strong>Onde Originelle</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 28; --h2: 60" aria-labelledby="p0383"
+                 data-def="140" data-def-spe="90" data-taille="3.5" data-poids="950">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png" alt="Illustration de Groudon" width="475" height="475" loading="lazy">
+              <span class="fx fx--seisme" style="--x: 58%; --y: 84%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0383 <span>· Légendaire</span></p>
+            <h3 id="p0383">Groudon</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--ground">Sol</li>
+            </ul>
+            <p class="card__desc">Il dormait dans le magma souterrain depuis sa lutte féroce contre Kyogre, il y a longtemps de cela.</p>
+            <p class="card__move">Attaque fétiche <strong>Lame Pangéenne</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 150"><dt>Attaque</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 150; --h2: 95" aria-labelledby="p0384"
+                 data-def="90" data-def-spe="90" data-taille="7" data-poids="206.5">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" alt="Illustration de Rayquaza" width="475" height="475" loading="lazy">
+              <span class="fx fx--aura" style="--x: 14%; --y: 42%; --dir: 200deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0384 <span>· Légendaire</span></p>
+            <h3 id="p0384">Rayquaza</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Il vit dans la couche d’ozone, au dessus des nuages. Il est invisible depuis le sol.</p>
+            <p class="card__move">Attaque fétiche <strong>Draco-Ascension</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 105"><dt>PV</dt><dd>105</dd></div>
+              <div class="stat" style="--v: 150"><dt>Attaque</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 95"><dt>Vitesse</dt><dd>95</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 95; --h2: 235" aria-labelledby="p0385"
+                 data-def="100" data-def-spe="100" data-taille="0.3" data-poids="1.1">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png" alt="Illustration de Jirachi" width="475" height="475" loading="lazy">
+              <span class="fx fx--etincelles" style="--x: 50%; --y: 30%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0385 <span>· Fabuleux</span></p>
+            <h3 id="p0385">Jirachi</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--steel">Acier</li>
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">On raconte qu’à son réveil, il exauce les vœux écrits sur les rubans de papier de sa tête.</p>
+            <p class="card__move">Attaque fétiche <strong>Vœu Destructeur</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 45; --h2: 210" aria-labelledby="p0386"
+                 data-def="50" data-def-spe="50" data-taille="1.7" data-poids="60.8">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png" alt="Illustration de Deoxys" width="475" height="475" loading="lazy">
+              <span class="fx fx--ondes" style="--x: 40%; --y: 38%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0386 <span>· Fabuleux</span></p>
+            <h3 id="p0386">Deoxys</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">C’est un virus extraterrestre qui a muté en Pokémon. Il apparaît à proximité des aurores boréales.</p>
+            <p class="card__move">Attaque fétiche <strong>Psycho-Boost</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 50"><dt>PV</dt><dd>50</dd></div>
+              <div class="stat" style="--v: 150"><dt>Attaque</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 150"><dt>Vitesse</dt><dd>150</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <section class="gen" aria-labelledby="gen-IV">
+      <h2 class="gen__title" id="gen-IV">Génération IV <span>Sinnoh · 14 Pokémon</span></h2>
+      <div class="cards">
+
+        <article class="card" style="--h: 95; --h2: 25; --c: 0.9" aria-labelledby="p0480"
+                 data-def="130" data-def-spe="130" data-taille="0.3" data-poids="0.3">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/480.png" alt="Illustration de Créhelf" width="475" height="475" loading="lazy">
+              <span class="fx fx--rayons" style="--x: 23%; --y: 26%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0480 <span>· Légendaire</span></p>
+            <h3 id="p0480">Créhelf</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Quand il prit son envol, les hommes apprirent à résoudre les problèmes. Le savoir était né.</p>
+            <p class="card__move">Attaque fétiche <strong>Prescience</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 75"><dt>PV</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 75"><dt>Attaque</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 75"><dt>Att. Spé.</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 95"><dt>Vitesse</dt><dd>95</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 350; --h2: 25" aria-labelledby="p0481"
+                 data-def="105" data-def-spe="105" data-taille="0.3" data-poids="0.3">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/481.png" alt="Illustration de Créfollet" width="475" height="475" loading="lazy">
+              <span class="fx fx--ondes" style="--x: 50%; --y: 16%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0481 <span>· Légendaire</span></p>
+            <h3 id="p0481">Créfollet</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Il dort au fond d’un lac. On dit que son esprit abandonne son corps pour voler à sa surface.</p>
+            <p class="card__move">Attaque fétiche <strong>Extrasenseur</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 105"><dt>Attaque</dt><dd>105</dd></div>
+              <div class="stat" style="--v: 105"><dt>Att. Spé.</dt><dd>105</dd></div>
+              <div class="stat" style="--v: 80"><dt>Vitesse</dt><dd>80</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 250; --h2: 25" aria-labelledby="p0482"
+                 data-def="70" data-def-spe="70" data-taille="0.3" data-poids="0.3">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/482.png" alt="Illustration de Créfadet" width="475" height="475" loading="lazy">
+              <span class="fx fx--aura" style="--x: 40%; --y: 22%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0482 <span>· Légendaire</span></p>
+            <h3 id="p0482">Créfadet</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">On raconte que Créhelf, Créfollet et Créfadet proviennent du même Œuf.</p>
+            <p class="card__move">Attaque fétiche <strong>Machination</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 75"><dt>PV</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 125"><dt>Attaque</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 125"><dt>Att. Spé.</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 115"><dt>Vitesse</dt><dd>115</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 255; --h2: 200" aria-labelledby="p0483"
+                 data-def="120" data-def-spe="100" data-taille="5.4" data-poids="683">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png" alt="Illustration de Dialga" width="475" height="475" loading="lazy">
+              <span class="fx fx--ondes" style="--x: 77%; --y: 57%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0483 <span>· Légendaire</span></p>
+            <h3 id="p0483">Dialga</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--steel">Acier</li>
+              <li class="type type--dragon">Dragon</li>
+            </ul>
+            <p class="card__desc">Il peut contrôler le temps. Les mythes de Sinnoh en parlent comme d’une divinité ancienne.</p>
+            <p class="card__move">Attaque fétiche <strong>Hurle-Temps</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 120"><dt>Attaque</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 330; --h2: 300; --c: 0.8" aria-labelledby="p0484"
+                 data-def="100" data-def-spe="120" data-taille="4.2" data-poids="336">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png" alt="Illustration de Palkia" width="475" height="475" loading="lazy">
+              <span class="fx fx--lame" style="--x: 52%; --y: 30%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0484 <span>· Légendaire</span></p>
+            <h3 id="p0484">Palkia</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--water">Eau</li>
+              <li class="type type--dragon">Dragon</li>
+            </ul>
+            <p class="card__desc">Il peut modeler l’espace. Les mythes de Sinnoh en parlent comme d’une divinité ancienne.</p>
+            <p class="card__move">Attaque fétiche <strong>Spatio-Rift</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 90"><dt>PV</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 120"><dt>Attaque</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 45; --h2: 25; --c: 0.9" aria-labelledby="p0485"
+                 data-def="106" data-def-spe="106" data-taille="1.7" data-poids="430">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/485.png" alt="Illustration de Heatran" width="475" height="475" loading="lazy">
+              <span class="fx fx--vortex" style="--x: 30%; --y: 42%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0485 <span>· Légendaire</span></p>
+            <h3 id="p0485">Heatran</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--fire">Feu</li>
+              <li class="type type--steel">Acier</li>
+            </ul>
+            <p class="card__desc">Le sang de ce Pokémon des cratères bouillonne dans son corps comme du magma.</p>
+            <p class="card__move">Attaque fétiche <strong>Vortex Magma</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 91"><dt>PV</dt><dd>91</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 130"><dt>Att. Spé.</dt><dd>130</dd></div>
+              <div class="stat" style="--v: 77"><dt>Vitesse</dt><dd>77</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 100; --h2: 140; --c: 0.6" aria-labelledby="p0486"
+                 data-def="110" data-def-spe="110" data-taille="3.7" data-poids="420">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/486.png" alt="Illustration de Regigigas" width="475" height="475" loading="lazy">
+              <span class="fx fx--seisme" style="--x: 50%; --y: 80%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0486 <span>· Légendaire</span></p>
+            <h3 id="p0486">Regigigas</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--normal">Normal</li>
+            </ul>
+            <p class="card__desc">On dit qu’il a créé des Pokémon à son image à partir de glace, de roche et de magma.</p>
+            <p class="card__move">Attaque fétiche <strong>Presse</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 110"><dt>PV</dt><dd>110</dd></div>
+              <div class="stat" style="--v: 160"><dt>Attaque</dt><dd>160</dd></div>
+              <div class="stat" style="--v: 80"><dt>Att. Spé.</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 25; --h2: 85; --c: 0.7" aria-labelledby="p0487"
+                 data-def="120" data-def-spe="120" data-taille="4.5" data-poids="750">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png" alt="Illustration de Giratina" width="475" height="475" loading="lazy">
+              <span class="fx fx--vortex" style="--x: 50%; --y: 40%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0487 <span>· Légendaire</span></p>
+            <h3 id="p0487">Giratina</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--ghost">Spectre</li>
+              <li class="type type--dragon">Dragon</li>
+            </ul>
+            <p class="card__desc">Il vit dans le Monde Distorsion, un monde à l’opposé du nôtre qui échappe au sens commun.</p>
+            <p class="card__move">Attaque fétiche <strong>Revenant</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 150"><dt>PV</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 345; --h2: 95; --c: 0.9" aria-labelledby="p0488"
+                 data-def="110" data-def-spe="120" data-taille="1.5" data-poids="85.6">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/488.png" alt="Illustration de Cresselia" width="475" height="475" loading="lazy">
+              <span class="fx fx--etincelles" style="--x: 75%; --y: 30%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0488 <span>· Légendaire</span></p>
+            <h3 id="p0488">Cresselia</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">Les nuits où le premier croissant de lune est visible, l’arc de sa queue se déploie de façon superbe.</p>
+            <p class="card__move">Attaque fétiche <strong>Danse Lune</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 120"><dt>PV</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 70"><dt>Attaque</dt><dd>70</dd></div>
+              <div class="stat" style="--v: 75"><dt>Att. Spé.</dt><dd>75</dd></div>
+              <div class="stat" style="--v: 85"><dt>Vitesse</dt><dd>85</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 230; --h2: 200; --c: 0.9" aria-labelledby="p0489"
+                 data-def="80" data-def-spe="80" data-taille="0.4" data-poids="3.1">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/489.png" alt="Illustration de Phione" width="475" height="475" loading="lazy">
+              <span class="fx fx--bulles" style="--x: 27%; --y: 64%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0489 <span>· Fabuleux</span></p>
+            <h3 id="p0489">Phione</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--water">Eau</li>
+            </ul>
+            <p class="card__desc">Il gonfle la bouée de sa tête et se laisse flotter à la surface quand la mer se réchauffe.</p>
+            <p class="card__move">Attaque fétiche <strong>Bulles d’O</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 80"><dt>Attaque</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 80"><dt>Att. Spé.</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 80"><dt>Vitesse</dt><dd>80</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 240; --h2: 25" aria-labelledby="p0490"
+                 data-def="100" data-def-spe="100" data-taille="0.3" data-poids="1.4">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/490.png" alt="Illustration de Manaphy" width="475" height="475" loading="lazy">
+              <span class="fx fx--etincelles" style="--x: 38%; --y: 60%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0490 <span>· Fabuleux</span></p>
+            <h3 id="p0490">Manaphy</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--water">Eau</li>
+            </ul>
+            <p class="card__desc">Il possède l’étrange pouvoir de s’entendre avec n’importe quel Pokémon.</p>
+            <p class="card__move">Attaque fétiche <strong>Permucœur</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 285; --h2: 20; --c: 0.5" aria-labelledby="p0491"
+                 data-def="90" data-def-spe="90" data-taille="1.5" data-poids="50.5">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png" alt="Illustration de Darkrai" width="475" height="475" loading="lazy">
+              <span class="fx fx--vortex" style="--x: 38%; --y: 42%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0491 <span>· Fabuleux</span></p>
+            <h3 id="p0491">Darkrai</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dark">Ténèbres</li>
+            </ul>
+            <p class="card__desc">Menacé, ce Pokémon se protège en créant des cauchemars dans l’esprit de ses ennemis.</p>
+            <p class="card__move">Attaque fétiche <strong>Trou Noir</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 70"><dt>PV</dt><dd>70</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 135"><dt>Att. Spé.</dt><dd>135</dd></div>
+              <div class="stat" style="--v: 125"><dt>Vitesse</dt><dd>125</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 140; --h2: 350" aria-labelledby="p0492"
+                 data-def="100" data-def-spe="100" data-taille="0.2" data-poids="2.1">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/492.png" alt="Illustration de Shaymin" width="475" height="475" loading="lazy">
+              <span class="fx fx--feuilles" style="--x: 35%; --y: 45%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0492 <span>· Fabuleux</span></p>
+            <h3 id="p0492">Shaymin</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--grass">Plante</li>
+            </ul>
+            <p class="card__desc">Il prend son essor pour répandre la gratitude lorsque les Gracidées fleurissent.</p>
+            <p class="card__move">Attaque fétiche <strong>Fulmigraine</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 90; --h2: 140; --c: 0.8" aria-labelledby="p0493"
+                 data-def="120" data-def-spe="120" data-taille="3.2" data-poids="320">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png" alt="Illustration de Arceus" width="475" height="475" loading="lazy">
+              <span class="fx fx--rayons" style="--x: 52%; --y: 52%; --dir: -90deg; --beam: 1" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0493 <span>· Fabuleux</span></p>
+            <h3 id="p0493">Arceus</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--normal">Normal</li>
+            </ul>
+            <p class="card__desc">Dans la mythologie, ce Pokémon existait déjà avant la formation de l’univers.</p>
+            <p class="card__move">Attaque fétiche <strong>Jugement</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 120"><dt>PV</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 120"><dt>Attaque</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 120"><dt>Att. Spé.</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 120"><dt>Vitesse</dt><dd>120</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <section class="gen" aria-labelledby="gen-V">
+      <h2 class="gen__title" id="gen-V">Génération V <span>Unys · 13 Pokémon</span></h2>
+      <div class="cards">
+
+        <article class="card" style="--h: 55; --h2: 30" aria-labelledby="p0494"
+                 data-def="100" data-def-spe="100" data-taille="0.4" data-poids="4">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/494.png" alt="Illustration de Victini" width="475" height="475" loading="lazy">
+              <span class="fx fx--feu" style="--x: 44%; --y: 42%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0494 <span>· Fabuleux</span></p>
+            <h3 id="p0494">Victini</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+              <li class="type type--fire">Feu</li>
+            </ul>
+            <p class="card__desc">Son corps produit une énergie sans limites qu’il peut partager avec ceux qu’il touche.</p>
+            <p class="card__move">Attaque fétiche <strong>Coup Victoire</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Vitesse</dt><dd>100</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 230; --h2: 200" aria-labelledby="p0638"
+                 data-def="129" data-def-spe="72" data-taille="2.1" data-poids="250">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png" alt="Illustration de Cobaltium" width="475" height="475" loading="lazy">
+              <span class="fx fx--lame" style="--x: 50%; --y: 10%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0638 <span>· Légendaire</span></p>
+            <h3 id="p0638">Cobaltium</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--steel">Acier</li>
+              <li class="type type--fighting">Combat</li>
+            </ul>
+            <p class="card__desc">Dès la naissance, il a un air de chef. Même le plus terrible des adversaires file doux face à lui.</p>
+            <p class="card__move">Attaque fétiche <strong>Lame Sainte</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 91"><dt>PV</dt><dd>91</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 90"><dt>Att. Spé.</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 108"><dt>Vitesse</dt><dd>108</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 60; --h2: 40; --c: 0.7" aria-labelledby="p0639"
+                 data-def="90" data-def-spe="90" data-taille="1.9" data-poids="260">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/639.png" alt="Illustration de Terrakium" width="475" height="475" loading="lazy">
+              <span class="fx fx--lame" style="--x: 16%; --y: 34%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0639 <span>· Légendaire</span></p>
+            <h3 id="p0639">Terrakium</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--rock">Roche</li>
+              <li class="type type--fighting">Combat</li>
+            </ul>
+            <p class="card__desc">Selon une légende d’Unys, Terrakium se serait jadis dressé contre les humains pour protéger les Pokémon.</p>
+            <p class="card__move">Attaque fétiche <strong>Lame Sainte</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 91"><dt>PV</dt><dd>91</dd></div>
+              <div class="stat" style="--v: 129"><dt>Attaque</dt><dd>129</dd></div>
+              <div class="stat" style="--v: 72"><dt>Att. Spé.</dt><dd>72</dd></div>
+              <div class="stat" style="--v: 108"><dt>Vitesse</dt><dd>108</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 150; --h2: 350" aria-labelledby="p0640"
+                 data-def="72" data-def-spe="129" data-taille="2" data-poids="200">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png" alt="Illustration de Viridium" width="475" height="475" loading="lazy">
+              <span class="fx fx--lame" style="--x: 80%; --y: 13%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0640 <span>· Légendaire</span></p>
+            <h3 id="p0640">Viridium</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--grass">Plante</li>
+              <li class="type type--fighting">Combat</li>
+            </ul>
+            <p class="card__desc">Il a défié les humains pour protéger les siens. Son nom est resté dans la légende.</p>
+            <p class="card__move">Attaque fétiche <strong>Lame Sainte</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 91"><dt>PV</dt><dd>91</dd></div>
+              <div class="stat" style="--v: 90"><dt>Attaque</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 90"><dt>Att. Spé.</dt><dd>90</dd></div>
+              <div class="stat" style="--v: 108"><dt>Vitesse</dt><dd>108</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 150; --h2: 300" aria-labelledby="p0641"
+                 data-def="70" data-def-spe="80" data-taille="1.5" data-poids="63">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png" alt="Illustration de Boréas" width="475" height="475" loading="lazy">
+              <span class="fx fx--vent" style="--x: 48%; --y: 25%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0641 <span>· Légendaire</span></p>
+            <h3 id="p0641">Boréas</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">L’énergie dégagée par sa queue provoque d’énormes tempêtes dont la force peut renverser des maisons.</p>
+            <p class="card__move">Attaque fétiche <strong>Vent Violent</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 79"><dt>PV</dt><dd>79</dd></div>
+              <div class="stat" style="--v: 115"><dt>Attaque</dt><dd>115</dd></div>
+              <div class="stat" style="--v: 125"><dt>Att. Spé.</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 111"><dt>Vitesse</dt><dd>111</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 240; --h2: 300" aria-labelledby="p0642"
+                 data-def="70" data-def-spe="80" data-taille="1.5" data-poids="61">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png" alt="Illustration de Fulguris" width="475" height="475" loading="lazy">
+              <span class="fx fx--eclair" style="--x: 55%; --y: 50%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0642 <span>· Légendaire</span></p>
+            <h3 id="p0642">Fulguris</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--electric">Électrik</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Sa queue lance des décharges électriques. Il vole dans le ciel d’Unys et fait tomber des éclairs.</p>
+            <p class="card__move">Attaque fétiche <strong>Fatal-Foudre</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 79"><dt>PV</dt><dd>79</dd></div>
+              <div class="stat" style="--v: 115"><dt>Attaque</dt><dd>115</dd></div>
+              <div class="stat" style="--v: 125"><dt>Att. Spé.</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 111"><dt>Vitesse</dt><dd>111</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 250; --h2: 45; --c: 0.7; --hb: 50" aria-labelledby="p0643"
+                 data-def="100" data-def-spe="120" data-taille="3.2" data-poids="330">
+          <div class="card__art">
+            <div class="poke">
+              <img src="img/reshiram.png" alt="Reshiram, grand dragon blanc aux ailes déployées" width="475" height="475" loading="lazy">
+              <span class="fx fx--feu" style="--x: 91%; --y: 28%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0643 <span>· Légendaire</span></p>
+            <h3 id="p0643">Reshiram</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--fire">Feu</li>
+            </ul>
+            <p class="card__desc">Un Pokémon légendaire assez puissant pour embraser le monde entier. Il soutient les défenseurs de la Réalité.</p>
+            <p class="card__move">Attaque fétiche <strong>Flamme Bleue</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 120"><dt>Attaque</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 260; --h2: 220; --c: 0.5" aria-labelledby="p0644"
+                 data-def="120" data-def-spe="100" data-taille="2.9" data-poids="345">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png" alt="Illustration de Zekrom" width="475" height="475" loading="lazy">
+              <span class="fx fx--eclair" style="--x: 62%; --y: 62%; --dir: 0deg; --fxh: 230" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0644 <span>· Légendaire</span></p>
+            <h3 id="p0644">Zekrom</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--electric">Électrik</li>
+            </ul>
+            <p class="card__desc">Un Pokémon légendaire assez puissant pour foudroyer le monde entier. Il soutient ceux qui suivent leur Idéal.</p>
+            <p class="card__move">Attaque fétiche <strong>Charge Foudre</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 150"><dt>Attaque</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 120"><dt>Att. Spé.</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 50; --h2: 20; --c: 0.9" aria-labelledby="p0645"
+                 data-def="90" data-def-spe="80" data-taille="1.5" data-poids="68">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png" alt="Illustration de Démétéros" width="475" height="475" loading="lazy">
+              <span class="fx fx--seisme" style="--x: 55%; --y: 82%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0645 <span>· Légendaire</span></p>
+            <h3 id="p0645">Démétéros</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--ground">Sol</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">L’énergie déversée par sa queue enrichit les sols en nutriments et favorise les cultures.</p>
+            <p class="card__move">Attaque fétiche <strong>Telluriforce</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 89"><dt>PV</dt><dd>89</dd></div>
+              <div class="stat" style="--v: 125"><dt>Attaque</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 115"><dt>Att. Spé.</dt><dd>115</dd></div>
+              <div class="stat" style="--v: 101"><dt>Vitesse</dt><dd>101</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 220; --h2: 95; --c: 0.5" aria-labelledby="p0646"
+                 data-def="90" data-def-spe="90" data-taille="3" data-poids="325">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/646.png" alt="Illustration de Kyurem" width="475" height="475" loading="lazy">
+              <span class="fx fx--neige" style="--x: 9%; --y: 58%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0646 <span>· Légendaire</span></p>
+            <h3 id="p0646">Kyurem</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--ice">Glace</li>
+            </ul>
+            <p class="card__desc">Il se serait congelé lui-même avec son souffle glacé pour stabiliser sa structure cellulaire.</p>
+            <p class="card__move">Attaque fétiche <strong>Ère Glaciaire</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 125"><dt>PV</dt><dd>125</dd></div>
+              <div class="stat" style="--v: 130"><dt>Attaque</dt><dd>130</dd></div>
+              <div class="stat" style="--v: 130"><dt>Att. Spé.</dt><dd>130</dd></div>
+              <div class="stat" style="--v: 95"><dt>Vitesse</dt><dd>95</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 230; --h2: 55" aria-labelledby="p0647"
+                 data-def="90" data-def-spe="90" data-taille="1.4" data-poids="48.5">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png" alt="Illustration de Keldeo" width="475" height="475" loading="lazy">
+              <span class="fx fx--lame" style="--x: 6%; --y: 42%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0647 <span>· Fabuleux</span></p>
+            <h3 id="p0647">Keldeo</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--water">Eau</li>
+              <li class="type type--fighting">Combat</li>
+            </ul>
+            <p class="card__desc">Il parcourt le monde en courant à la surface des mers et des cours d’eau. Il apparaît là où l’eau est très pure.</p>
+            <p class="card__move">Attaque fétiche <strong>Lame Ointe</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 91"><dt>PV</dt><dd>91</dd></div>
+              <div class="stat" style="--v: 72"><dt>Attaque</dt><dd>72</dd></div>
+              <div class="stat" style="--v: 129"><dt>Att. Spé.</dt><dd>129</dd></div>
+              <div class="stat" style="--v: 108"><dt>Vitesse</dt><dd>108</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 165; --h2: 25; --c: 0.9" aria-labelledby="p0648"
+                 data-def="77" data-def-spe="128" data-taille="0.6" data-poids="6.5">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png" alt="Illustration de Meloetta" width="475" height="475" loading="lazy">
+              <span class="fx fx--ondes" style="--x: 40%; --y: 32%; --dir: 180deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0648 <span>· Fabuleux</span></p>
+            <h3 id="p0648">Meloetta</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--normal">Normal</li>
+              <li class="type type--psychic">Psy</li>
+            </ul>
+            <p class="card__desc">De nombreux succès musicaux ont été composés en s’inspirant des mélodies chantées par Meloetta.</p>
+            <p class="card__move">Attaque fétiche <strong>Chant Antique</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 100"><dt>PV</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 77"><dt>Attaque</dt><dd>77</dd></div>
+              <div class="stat" style="--v: 128"><dt>Att. Spé.</dt><dd>128</dd></div>
+              <div class="stat" style="--v: 90"><dt>Vitesse</dt><dd>90</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 300; --h2: 25; --c: 0.8" aria-labelledby="p0649"
+                 data-def="95" data-def-spe="95" data-taille="1.5" data-poids="82.5">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/649.png" alt="Illustration de Genesect" width="475" height="475" loading="lazy">
+              <span class="fx fx--rayons" style="--x: 80%; --y: 10%; --dir: 180deg; --beam: 1" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0649 <span>· Fabuleux</span></p>
+            <h3 id="p0649">Genesect</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--bug">Insecte</li>
+              <li class="type type--steel">Acier</li>
+            </ul>
+            <p class="card__desc">Il y a 300 millions d’années, il était craint comme l’ultime prédateur. Il a été modifié par la Team Plasma.</p>
+            <p class="card__move">Attaque fétiche <strong>Techno-Buster</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 71"><dt>PV</dt><dd>71</dd></div>
+              <div class="stat" style="--v: 120"><dt>Attaque</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 120"><dt>Att. Spé.</dt><dd>120</dd></div>
+              <div class="stat" style="--v: 99"><dt>Vitesse</dt><dd>99</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <section class="gen" aria-labelledby="gen-VI">
+      <h2 class="gen__title" id="gen-VI">Génération VI <span>Kalos · 6 Pokémon</span></h2>
+      <div class="cards">
+
+        <article class="card" style="--h: 235; --h2: 330" aria-labelledby="p0716"
+                 data-def="95" data-def-spe="98" data-taille="3" data-poids="215">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png" alt="Illustration de Xerneas" width="475" height="475" loading="lazy">
+              <span class="fx fx--etincelles" style="--x: 50%; --y: 22%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0716 <span>· Légendaire</span></p>
+            <h3 id="p0716">Xerneas</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--fairy">Fée</li>
+            </ul>
+            <p class="card__desc">D’après la légende, quand ses bois brillent de sept couleurs, cela signifie qu’il prodigue la vie éternelle.</p>
+            <p class="card__move">Attaque fétiche <strong>Géo-Contrôle</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 126"><dt>PV</dt><dd>126</dd></div>
+              <div class="stat" style="--v: 131"><dt>Attaque</dt><dd>131</dd></div>
+              <div class="stat" style="--v: 131"><dt>Att. Spé.</dt><dd>131</dd></div>
+              <div class="stat" style="--v: 99"><dt>Vitesse</dt><dd>99</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 25; --h2: 300" aria-labelledby="p0717"
+                 data-def="95" data-def-spe="98" data-taille="5.8" data-poids="203">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png" alt="Illustration de Yveltal" width="475" height="475" loading="lazy">
+              <span class="fx fx--vortex" style="--x: 55%; --y: 38%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0717 <span>· Légendaire</span></p>
+            <h3 id="p0717">Yveltal</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dark">Ténèbres</li>
+              <li class="type type--flying">Vol</li>
+            </ul>
+            <p class="card__desc">Quand il sent que la fin de sa vie est proche, il aspire la force vitale des êtres vivants et retourne à l’état de cocon.</p>
+            <p class="card__move">Attaque fétiche <strong>Mort’Ailes</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 126"><dt>PV</dt><dd>126</dd></div>
+              <div class="stat" style="--v: 131"><dt>Attaque</dt><dd>131</dd></div>
+              <div class="stat" style="--v: 131"><dt>Att. Spé.</dt><dd>131</dd></div>
+              <div class="stat" style="--v: 99"><dt>Vitesse</dt><dd>99</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 150; --h2: 110; --c: 0.9" aria-labelledby="p0718"
+                 data-def="121" data-def-spe="95" data-taille="5" data-poids="305">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png" alt="Illustration de Zygarde" width="475" height="475" loading="lazy">
+              <span class="fx fx--seisme" style="--x: 60%; --y: 85%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0718 <span>· Légendaire</span></p>
+            <h3 id="p0718">Zygarde</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--dragon">Dragon</li>
+              <li class="type type--ground">Sol</li>
+            </ul>
+            <p class="card__desc">Lorsque l’écosystème de Kalos est menacé, ce Pokémon apparaît et utilise son mystérieux pouvoir.</p>
+            <p class="card__move">Attaque fétiche <strong>Myria-Flèches</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 108"><dt>PV</dt><dd>108</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 81"><dt>Att. Spé.</dt><dd>81</dd></div>
+              <div class="stat" style="--v: 95"><dt>Vitesse</dt><dd>95</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 350; --h2: 220" aria-labelledby="p0719"
+                 data-def="150" data-def-spe="150" data-taille="0.7" data-poids="8.8">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/719.png" alt="Illustration de Diancie" width="475" height="475" loading="lazy">
+              <span class="fx fx--etincelles" style="--x: 50%; --y: 18%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0719 <span>· Fabuleux</span></p>
+            <h3 id="p0719">Diancie</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--rock">Roche</li>
+              <li class="type type--fairy">Fée</li>
+            </ul>
+            <p class="card__desc">Ce Pokémon est une mutation spontanée de Strassie. Son corps rose et luisant est d’une beauté incomparable.</p>
+            <p class="card__move">Attaque fétiche <strong>Orage Adamantin</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 50"><dt>PV</dt><dd>50</dd></div>
+              <div class="stat" style="--v: 100"><dt>Attaque</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 100"><dt>Att. Spé.</dt><dd>100</dd></div>
+              <div class="stat" style="--v: 50"><dt>Vitesse</dt><dd>50</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 305; --h2: 90" aria-labelledby="p0720"
+                 data-def="60" data-def-spe="130" data-taille="0.5" data-poids="9">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png" alt="Illustration de Hoopa" width="475" height="475" loading="lazy">
+              <span class="fx fx--vortex" style="--x: 30%; --y: 25%; --dir: 0deg" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0720 <span>· Fabuleux</span></p>
+            <h3 id="p0720">Hoopa</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--psychic">Psy</li>
+              <li class="type type--ghost">Spectre</li>
+            </ul>
+            <p class="card__desc">Ce fauteur de troubles est doté d’anneaux qui déforment l’espace et lui permettent d’expédier au loin n’importe quel objet.</p>
+            <p class="card__move">Attaque fétiche <strong>TrouDimensionnel</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 110"><dt>Attaque</dt><dd>110</dd></div>
+              <div class="stat" style="--v: 150"><dt>Att. Spé.</dt><dd>150</dd></div>
+              <div class="stat" style="--v: 70"><dt>Vitesse</dt><dd>70</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="card" style="--h: 30; --h2: 240" aria-labelledby="p0721"
+                 data-def="120" data-def-spe="90" data-taille="1.7" data-poids="195">
+          <div class="card__art">
+            <div class="poke">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/721.png" alt="Illustration de Volcanion" width="475" height="475" loading="lazy">
+              <span class="fx fx--bulles" style="--x: 22%; --y: 30%; --dir: 180deg; --fxh: 230" aria-hidden="true"><span class="fx__charge"></span></span>
+            </div>
+          </div>
+          <div class="card__body">
+            <p class="card__num">N° 0721 <span>· Fabuleux</span></p>
+            <h3 id="p0721">Volcanion</h3>
+            <ul class="types" aria-label="Types">
+              <li class="type type--fire">Feu</li>
+              <li class="type type--water">Eau</li>
+            </ul>
+            <p class="card__desc">Il est capable de générer un nuage de vapeur pour se cacher. Il vit dans des montagnes inhabitées.</p>
+            <p class="card__move">Attaque fétiche <strong>Jet de Vapeur</strong></p>
+            <dl class="stats">
+              <div class="stat" style="--v: 80"><dt>PV</dt><dd>80</dd></div>
+              <div class="stat" style="--v: 110"><dt>Attaque</dt><dd>110</dd></div>
+              <div class="stat" style="--v: 130"><dt>Att. Spé.</dt><dd>130</dd></div>
+              <div class="stat" style="--v: 70"><dt>Vitesse</dt><dd>70</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Fiche détaillée : script.js la remplit et l'ouvre au clic sur une carte -->
+  <dialog class="fiche" aria-labelledby="fiche-nom">
+    <form method="dialog">
+      <button class="fiche__close" aria-label="Fermer la fiche" autofocus>✕</button>
+    </form>
+    <div class="fiche__art">
+      <img src="" alt="" width="475" height="475">
+    </div>
+    <div class="fiche__body">
+      <p class="card__num"></p>
+      <h2 id="fiche-nom"></h2>
+      <ul class="types" aria-label="Types"></ul>
+      <p class="fiche__desc"></p>
+      <div class="fiche__actions">
+        <button class="fiche__cri" type="button">Écouter le cri</button>
+        <button class="fiche__shiny" type="button" aria-pressed="false">Chromatique</button>
+      </div>
+      <dl class="fiche__mesures">
+        <div><dt>Taille</dt><dd data-champ="taille"></dd></div>
+        <div><dt>Poids</dt><dd data-champ="poids"></dd></div>
+        <div><dt>Total des stats</dt><dd data-champ="total"></dd></div>
+      </dl>
+      <h3>Statistiques de base</h3>
+      <dl class="stats fiche__stats"></dl>
+      <h3>Faiblesses <span>d’après les types</span></h3>
+      <ul class="types fiche__faiblesses" aria-label="Faiblesses"></ul>
+    </div>
+  </dialog>
+
+  <footer class="credits">
+    <p>Données et illustrations : PokeAPI. Pokémon © Nintendo, Creatures, Game Freak, The Pokémon Company.</p>
+  </footer>
+
+</body>
+</html>
